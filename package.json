@@ -41,7 +41,7 @@
     "multer": "^1.3.0",
     "mysql": "^2.13.0"
   }
-  ,engines": {
+  ,"engines": {
     "node": "6.12.x"
   }
 }

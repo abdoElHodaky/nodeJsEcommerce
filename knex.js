@@ -1,10 +1,10 @@
 var knex = require('knex')({
   client: 'mysql',
   connection: {
-    host : '127.0.0.1',
-    user : 'root',
-    password : '279348',
-    database : 'e-commerce'
+    host : 'db4free.net',
+    user : 'abdo_ecommrce',
+    password : 'arh.27934',
+    database : 'ecommerce2'
   }
 });
 module.exports=knex

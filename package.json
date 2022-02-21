@@ -1,7 +1,8 @@
 {
-  "name": "node",
-  "version": "0.0.0",
+  "name": "nodeecommerce",
+  "version": "0.0.1",
   "private": false ,
+  "main":"app.js",
   "scripts":{
      "start":"npm update&&node app.js"
    },

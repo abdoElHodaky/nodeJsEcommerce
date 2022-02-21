@@ -4,6 +4,7 @@
   "private": false ,
   "main":"app.js",
   "scripts":{
+     "upgrade":"npm upgrade",
      "start":"node app.js"
    },
   "dependencies": {

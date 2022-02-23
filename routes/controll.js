@@ -828,7 +828,7 @@ router.post("admin/shops",(req,res)=>{
 					i:{
 						notEmpty:true,
 						matches:{
-							options:['[0-9A-Za-z]'.'i'],
+							options:['[0-9A-Za-z]','i'],
 							errorMessage:"Your entire not matches"
 						}
 					}

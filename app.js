@@ -6,10 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var app = express();
 //app.listen(process.env.PORT || 3000,console.log)
-//var http = require('http');
-//var server = http.createServer(app);
+var http = require('http');
+var server = http.createServer(app);
 //server.listen(process.env.PORT || "3000")
-var io=require('socket.io')(app)
+var io=require('socket.io')(server)
 var index = require('./routes/controll')(io);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -57,5 +57,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.listen(process.env.PORT || '3000',console.log)
+server.listen(process.env.PORT || '3000',console.log)
 module.exports = app;

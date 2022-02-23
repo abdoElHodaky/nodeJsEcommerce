@@ -1,6 +1,6 @@
 {
-  "name": "nodeEcommerce",
-  "version": "0.0.1",
+  "name": "node",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node app.js"

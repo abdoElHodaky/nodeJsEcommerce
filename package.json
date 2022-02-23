@@ -1,6 +1,6 @@
 {
-  "name": "node",
-  "version": "0.0.0",
+  "name": "nodeEcommerce",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -13,7 +13,7 @@
     "ejs": "^2.7.4",
     "express": "^4.17.3",
     "express-flash": "0.0.2",
-    "express-validator": "^6.14.0",
+    "express-validator": "^5.x",
     "helmet-csp": "^2.10.0",
     "jquery": "^3.6.0",
     "jsdom": "^11.12.0",

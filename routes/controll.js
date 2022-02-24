@@ -186,7 +186,7 @@ router.route("/").get((req,res)=>{
 	var render={notifications:false,Client:client,Name:name,type:'visitor'}
 	if (req.session.LoggedIn==true) 
 	{
-		sql=knex('products').select(["products.ProductId",'products.Price','Products.Quantity',"products.ProductDesc","products.ProductName","products.ProductThumbnail",'cats.Cat','cats.ShopName','cats.CatDesc']).crossJoin('cats','cats.Cat',"=","products.Cat");
+		sql=knex('products').select(["products.ProductId",'products.Price','products.Quantity',"products.ProductDesc","products.ProductName","products.ProductThumbnail",'cats.Cat','cats.ShopName','cats.CatDesc']).crossJoin('cats','cats.Cat',"=","products.Cat");
 		if (!req.query.cat) {
 		sql.then((products)=>{
 				knex('cats').select().then((cats)=>{
@@ -206,7 +206,7 @@ router.route("/").get((req,res)=>{
 	}
 	else{
 			
-			sql=knex('products').select(["products.ProductId",'products.Price','Products.Quantity',"products.ProductDesc","products.ProductName","products.ProductThumbnail",'cats.Cat','cats.ShopName','cats.CatDesc']).crossJoin('cats','cats.Cat',"=","products.Cat");
+			sql=knex('products').select(["products.ProductId",'products.Price','products.Quantity',"products.ProductDesc","products.ProductName","products.ProductThumbnail",'cats.Cat','cats.ShopName','cats.CatDesc']).crossJoin('cats','cats.Cat',"=","products.Cat");
 				if (!req.query.cat) {
 				sql.then((products)=>{
 						knex('cats').select().then((cats)=>{

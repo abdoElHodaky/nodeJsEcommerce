@@ -1062,6 +1062,7 @@ router.route("/adminCreate").post((req,res)=>{
                                 user=req.body.userName;
 				password=req.body.password;
 				email=req.body.email
+                                type=req.body.type
 				knex('adms').select().then((adms)=>{
 					for(var i in adms){
 						r=(hashVerify('sha1',user,user,adms[i].Name)||hashVerify('sha1',email,email,adms[i].Email))
@@ -1078,13 +1079,14 @@ router.route("/adminCreate").post((req,res)=>{
 						knex('adms').insert({
 							Name:crypto.Hmac('sha1',user).update(user).digest('hex'),
 							Password:crypto.Hmac('sha1',password).update(password).digest('hex'),
-							Email:crypto.Hmac('sha1',email).update(email).digest('hex')
+							Email:crypto.Hmac('sha1',email).update(email).digest('hex'),
+                                                        type:type
 						/*}).then((d)=>{
 							knex('paccounts').insert({
 								ClientName:crypto.Hmac('sha1',user).update(user).digest('hex'),
 								Balance:500,
 						})*/.then((d)=>{
-								res.redirect("back");
+								res.redirect("/admin/");
 							}).catch((err)=>console.log(err));
 							
 						}).catch((err)=>console.log(err));

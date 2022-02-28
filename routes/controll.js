@@ -1081,17 +1081,18 @@ router.route("/adminCreate").get((req,res)=>{
 						req.flash("warning","Exists");
 						res.redirect('back');
 					}
-					else{
+					else
+                                         {
 						knex('adms').insert({
 							Name:crypto.Hmac('sha1',user).update(user).digest('hex'),
 							Password:crypto.Hmac('sha1',password).update(password).digest('hex'),
 							Email:crypto.Hmac('sha1',email).update(email).digest('hex'),
                                                         type:type})
 						.then((d)=>{
-								res.redirect("/admin/");
-							}).catch((err)=>console.log(err));
+						     res.redirect("/admin/");
+					        }).catch((err)=>console.log(err));
 							
-						}).catch((err)=>console.log(err));
+						//}).catch((err)=>console.log(err));
 					}
 				}).catch((err)=>console.log(err));
 

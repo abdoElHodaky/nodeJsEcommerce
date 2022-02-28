@@ -1056,7 +1056,8 @@ router.route("/trans/:from/:to/:action").post((req,res)=>{
 	},()=>{
 		res.render("users",{title:"Login"})
 	})
-})
+});
+/*
 router.route("/adminCreate").post((req,res)=>{
 
                                 user=req.body.userName;
@@ -1096,7 +1097,7 @@ router.route("/adminCreate").post((req,res)=>{
     res.end()
 
 })
-
+;*/
 router.route("/admin").get((req,res)=>{
 	var admin=req.session.admin,name=req.session.name;
 		if (req.session.LoggedIn==true&&admin){

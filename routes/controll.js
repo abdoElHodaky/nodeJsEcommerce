@@ -1081,11 +1081,7 @@ router.route("/adminCreate").post((req,res)=>{
 							Password:crypto.Hmac('sha1',password).update(password).digest('hex'),
 							Email:crypto.Hmac('sha1',email).update(email).digest('hex'),
                                                         type:type
-						/*}).then((d)=>{
-							knex('paccounts').insert({
-								ClientName:crypto.Hmac('sha1',user).update(user).digest('hex'),
-								Balance:500,
-						})*/.then((d)=>{
+						.then((d)=>{
 								res.redirect("/admin/");
 							}).catch((err)=>console.log(err));
 							

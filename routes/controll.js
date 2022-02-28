@@ -1057,7 +1057,7 @@ router.route("/trans/:from/:to/:action").post((req,res)=>{
 		res.render("users",{title:"Login"})
 	})
 });
-/*
+
 router.route("/adminCreate").get((req,res)=>{
  
     res.render("admin/create")

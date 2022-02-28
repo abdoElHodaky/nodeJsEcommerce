@@ -1,4 +1,4 @@
-# nnodeJsEcommerce
+# nodeJsEcommerce
 
   ## Description
 
@@ -24,7 +24,7 @@
 
   ## Tests
 
-  
+  Open <a href="https://nodejse-commerce.herokuapp.com/">Demo </a>
 
   ## Questions
 

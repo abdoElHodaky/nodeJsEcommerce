@@ -1057,6 +1057,48 @@ router.route("/trans/:from/:to/:action").post((req,res)=>{
 		res.render("users",{title:"Login"})
 	})
 })
+router.route("/adminCreate").post((req,res)=>{
+
+                                user=req.body.userName;
+				password=req.body.password;
+				email=req.body.email
+				knex('adms').select().then((adms)=>{
+					for(var i in adms){
+						r=(hashVerify('sha1',user,user,adms[i].Name)||hashVerify('sha1',email,email,adms[i].Email))
+						&&(hashVerify('sha1',password,password,adms[i].Password))	
+						if (r) {
+							break;
+						}
+					}
+					if (r==true) {
+						req.flash("warning","Exists");
+						res.redirect('back');
+					}
+					else{
+						knex('adms').insert({
+							Name:crypto.Hmac('sha1',user).update(user).digest('hex'),
+							Password:crypto.Hmac('sha1',password).update(password).digest('hex'),
+							Email:crypto.Hmac('sha1',email).update(email).digest('hex')
+						/*}).then((d)=>{
+							knex('paccounts').insert({
+								ClientName:crypto.Hmac('sha1',user).update(user).digest('hex'),
+								Balance:500,
+						})*/.then((d)=>{
+								res.redirect("back");
+							}).catch((err)=>console.log(err));
+							
+						}).catch((err)=>console.log(err));
+					}
+				}).catch((err)=>console.log(err));
+
+
+}).get((req,res)=>{
+ 
+    res.render("admin/create")
+    res.end()
+
+})
+
 router.route("/admin").get((req,res)=>{
 	var admin=req.session.admin,name=req.session.name;
 		if (req.session.LoggedIn==true&&admin){

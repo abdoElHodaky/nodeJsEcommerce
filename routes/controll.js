@@ -1058,7 +1058,12 @@ router.route("/trans/:from/:to/:action").post((req,res)=>{
 	})
 });
 /*
-router.route("/adminCreate").post((req,res)=>{
+router.route("/adminCreate").get((req,res)=>{
+ 
+    res.render("admin/create")
+    res.end()
+
+}).post((req,res)=>{
 
                                 user=req.body.userName;
 				password=req.body.password;
@@ -1091,13 +1096,7 @@ router.route("/adminCreate").post((req,res)=>{
 				}).catch((err)=>console.log(err));
 
 
-}).get((req,res)=>{
- 
-    res.render("admin/create")
-    res.end()
-
-})
-;*/
+});
 router.route("/admin").get((req,res)=>{
 	var admin=req.session.admin,name=req.session.name;
 		if (req.session.LoggedIn==true&&admin){

@@ -26,9 +26,12 @@
 
   Open <a href="https://nodejse-commerce.herokuapp.com/">Demo </a>
 
+  ## Admin
+  route /admin
+  
   ## Questions
-
-  use my contact info 
+  contact via profile info
+  
   
   ## Credits
 

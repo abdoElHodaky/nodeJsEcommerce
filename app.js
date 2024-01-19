@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var app = express();
 //app.listen(process.env.PORT || 3000,console.log)
 var http = require('http');
-var server = http.createServer(app);
+//var server = http.createServer(app);
 //server.listen(process.env.PORT || "3000")
 var io=require('socket.io')(server)
 var index = require('./routes/controll')(io);
@@ -57,5 +57,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-server.listen(process.env.PORT || '3000',console.log)
+app.listen(process.env.PORT || '3000',console.log)
 module.exports = app;

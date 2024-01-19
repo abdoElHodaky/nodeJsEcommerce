@@ -7,10 +7,10 @@ var bodyParser = require('body-parser');
 var app = express();
 //app.listen(process.env.PORT || 3000,console.log)
 var http = require('http');
-//var server = http.createServer(app);
+var server = http.createServer(app);
 //server.listen(process.env.PORT || "3000")
-//var io=require('socket.io')(server)
-var index = require('./routes/controll');
+var io=require('socket.io')(server)
+var index = require('./routes/controll')(io);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

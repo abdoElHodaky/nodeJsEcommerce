@@ -1,4 +1,4 @@
-module.exports = ()=>{
+module.exports = (io)=>{
 var app = require('express');
 var router = app.Router();
 var crypto=require("crypto"),knex=require('../knex');

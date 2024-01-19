@@ -9,7 +9,7 @@ var app = express();
 var http = require('http');
 //var server = http.createServer(app);
 //server.listen(process.env.PORT || "3000")
-var io=require('socket.io')(server)
+//var io=require('socket.io')(server)
 var index = require('./routes/controll')(io);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

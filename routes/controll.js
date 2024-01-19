@@ -74,9 +74,7 @@ function shuffle (array) {
     array[j] = temp
   }
 }
-io.on('connection',(socket)=>{
-	
-})
+
 /*router.route("/").get(function(req, res, next) {
 	checksession(req,res,()=>{
 		user=req.session.user

@@ -1,4 +1,4 @@
-FROM node:16-alpine3.16
+FROM node:18-alpine
 WORKDIR /app
 COPY . .
 RUN apk add --no-cache tzdata  sqlite-dev postgresql-dev mysql-dev 

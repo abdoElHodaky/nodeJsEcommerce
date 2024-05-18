@@ -42,11 +42,11 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+/*app.use(function(error,req, res, next) {
+ // var err = new Error('Not Found',error);
+  res.render("error",{error:error}
+  next();
+});*/
 
 // error handler
 app.use(function(err, req, res, next) {

@@ -1,0 +1,23 @@
+ {
+   
+   "compilerOptions": {
+
+         "target": "es2018",
+         "module": "commonjs",                          
+         "outDir": "./dist",                              
+         "rootDir": "./src",                             
+         "strict": true,                                
+         "moduleResolution": "node",                  
+         "esModuleInterop": true,                      
+         "skipLibCheck": true,                           
+         "forceConsistentCasingInFileNames": true,
+         "experimentalDecorators": true,
+         "strictPropertyInitialization": false,
+         "emitDecoratorMetadata": true,
+         "allowSyntheticDefaultImports": true
+      
+   },
+   "include": ["src"],
+   "exclude": ["node_modules"],
+   "skipLibCheck": true
+ }
